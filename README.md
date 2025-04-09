@@ -22,7 +22,7 @@ The dashboard helps visualize and answer key questions like:
 
 ## 📊 Dashboard Snapshot
 
-![Dashboard Screenshot](![image](https://github.com/user-attachments/assets/49a4c215-c59b-4c5e-b631-4566e01b429b))
+![Dashboard Screenshot](![image](https://github-production-user-asset-6210df.s3.amazonaws.com/101824646/431970678-49a4c215-c59b-4c5e-b631-4566e01b429b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250409T180728Z&X-Amz-Expires=300&X-Amz-Signature=c14dfedcca4d99030e5c9741a842d7bc9c35aad50177eadf7aeb1fe9cb76c4db&X-Amz-SignedHeaders=host))
 
 ## 🔗 Dataset
 
