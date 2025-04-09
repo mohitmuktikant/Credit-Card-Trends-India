@@ -1,0 +1,913 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='select amount for txn count' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Amount&quot;'>
+        <calculation class='tableau' formula='&quot;Amount&quot;' />
+        <members>
+          <member value='&quot;Amount&quot;' />
+          <member value='&quot;Count&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Credit card transactions - India - Simple' inline='true' name='federated.0ua6k740kq06c11fvdprk0eyqp5u' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Credit card transactions - India - Simple' name='textscan.1gzv3510roi4jk1a5xnw90sxvsrb'>
+            <connection class='textscan' directory='/Users/mohitmuktikant/Downloads/Creadit Card Trends India' filename='Credit card transactions - India - Simple.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1gzv3510roi4jk1a5xnw90sxvsrb' name='Credit card transactions - India - Simple.csv' table='[Credit card transactions - India - Simple#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='index' ordinal='0' />
+            <column datatype='string' name='City' ordinal='1' />
+            <column datatype='date' name='Date' ordinal='2' />
+            <column datatype='string' name='Card Type' ordinal='3' />
+            <column datatype='string' name='Exp Type' ordinal='4' />
+            <column datatype='boolean' name='Gender' ordinal='5' />
+            <column datatype='integer' name='Amount' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>index</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Card Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Card Type]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Card Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Exp Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Exp Type]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Exp Type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Amount]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Amount</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='City Names' datatype='string' name='[City - Split 1]' role='dimension' semantic-role='[City].[Name]' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[City]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [City], &quot;,&quot;, 1 ) )' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='gender.c' datatype='string' name='[Gender (copy)_439945454795874304]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; else &apos;MALE&apos;&#10;END' />
+      </column>
+      <column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' role='measure' type='quantitative' />
+      <column caption='Index' datatype='integer' name='[index]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/c0/vfcnjzx52531f0dnnprdysy40000gn/T/tableau-temp/#TableauTemp_0kkaso21o2ewor16z50q208dfgse.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/09/2025 04:04:09 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>index</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[index]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>index</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26052</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1329</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1164</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Card Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Card Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Card Type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Exp Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Exp Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Exp Type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Amount</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26052</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Credit card transactions - India - Simple.csv' id='Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED'>
+            <properties context=''>
+              <relation connection='textscan.1gzv3510roi4jk1a5xnw90sxvsrb' name='Credit card transactions - India - Simple.csv' table='[Credit card transactions - India - Simple#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='index' ordinal='0' />
+                  <column datatype='string' name='City' ordinal='1' />
+                  <column datatype='date' name='Date' ordinal='2' />
+                  <column datatype='string' name='Card Type' ordinal='3' />
+                  <column datatype='string' name='Exp Type' ordinal='4' />
+                  <column datatype='boolean' name='Gender' ordinal='5' />
+                  <column datatype='integer' name='Amount' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Cities Distribution'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7'>Cities Distribution</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.0ua6k740kq06c11fvdprk0eyqp5u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ua6k740kq06c11fvdprk0eyqp5u'>
+            <column datatype='string' name='[Card Type]' role='dimension' type='nominal' />
+            <column caption='City Names' datatype='string' name='[City - Split 1]' role='dimension' semantic-role='[City].[Name]' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[City]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [City], &quot;,&quot;, 1 ) )' />
+            </column>
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='gender.c' datatype='string' name='[Gender (copy)_439945454795874304]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; else &apos;MALE&apos;&#10;END' />
+            </column>
+            <column datatype='boolean' name='[Gender]' role='dimension' type='nominal' />
+            <column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Card Type]' derivation='None' name='[none:Card Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[City - Split 1]' derivation='None' name='[none:City - Split 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender (copy)_439945454795874304]' derivation='None' name='[none:Gender (copy)_439945454795874304:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Card Type:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Gold&quot;' />
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Platinum&quot;' />
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Signature&quot;' />
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Silver&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]'>
+            <groupfilter function='level-members' level='[none:Gender (copy)_439945454795874304:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Card Type:nk]</column>
+            <column>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' value='12' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' palette='red_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+              <color column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:City - Split 1:nk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{01CD3FB1-A24E-438C-A24C-AA6D61EB1A89}' />
+    </worksheet>
+    <worksheet name='Distribution of Expenditure Types'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7'>Distribution of Expenditure Types</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.0ua6k740kq06c11fvdprk0eyqp5u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ua6k740kq06c11fvdprk0eyqp5u'>
+            <column datatype='string' name='[Exp Type]' role='dimension' type='nominal' />
+            <column caption='gender.c' datatype='string' name='[Gender (copy)_439945454795874304]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; else &apos;MALE&apos;&#10;END' />
+            </column>
+            <column datatype='boolean' name='[Gender]' role='dimension' type='nominal' />
+            <column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Exp Type]' derivation='None' name='[none:Exp Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender (copy)_439945454795874304]' derivation='None' name='[none:Gender (copy)_439945454795874304:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' scope='rows' value='Count' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' value='12' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Exp Type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]</rows>
+        <cols>([federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Exp Type:nk] / [federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk])</cols>
+      </table>
+      <simple-id uuid='{9712096A-DF28-4FC4-B672-E71CF8885BBB}' />
+    </worksheet>
+    <worksheet name='Distribution of Gender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7'>Distribution of Gender</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.0ua6k740kq06c11fvdprk0eyqp5u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ua6k740kq06c11fvdprk0eyqp5u'>
+            <column caption='gender.c' datatype='string' name='[Gender (copy)_439945454795874304]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; else &apos;MALE&apos;&#10;END' />
+            </column>
+            <column datatype='boolean' name='[Gender]' role='dimension' type='nominal' />
+            <column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Gender (copy)_439945454795874304]' derivation='None' name='[none:Gender (copy)_439945454795874304:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' value='N' />
+            <format attr='font-size' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' value='12' />
+            <format attr='font-weight' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' value='bold' />
+            <format attr='text-format' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' value='N' />
+            <format attr='font-size' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' value='12' />
+            <format attr='font-weight' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' />
+              <wedge-size column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+              <size column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='0.82359117269515991' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8BCA9997-DF41-4D0D-831D-B67B3D274450}' />
+    </worksheet>
+    <worksheet name='Number of card and type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7'>Card Types Distribution</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.0ua6k740kq06c11fvdprk0eyqp5u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ua6k740kq06c11fvdprk0eyqp5u'>
+            <column datatype='string' name='[Card Type]' role='dimension' type='nominal' />
+            <column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Card Type]' derivation='None' name='[none:Card Type:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]</rows>
+        <cols>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Card Type:nk]</cols>
+      </table>
+      <simple-id uuid='{39801F48-D5F1-4F7F-85EB-6667EC9916EE}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.0ua6k740kq06c11fvdprk0eyqp5u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ua6k740kq06c11fvdprk0eyqp5u'>
+            <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
+            <column caption='gender.c' datatype='string' name='[Gender (copy)_439945454795874304]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; else &apos;MALE&apos;&#10;END' />
+            </column>
+            <column datatype='boolean' name='[Gender]' role='dimension' type='nominal' />
+            <column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gender (copy)_439945454795874304]' derivation='None' name='[none:Gender (copy)_439945454795874304:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[sum:Amount:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' value='c&quot;₹&quot;#,##0,,,.00B;-&quot;₹&quot;#,##0,,,.00B' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' />
+              <wedge-size column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+              <size column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.91154694557189941' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8804B294-B0FB-4CBE-8CA3-9D2CFED4A8D6}' />
+    </worksheet>
+    <worksheet name='Transaction Distribution of Cities'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7'>Transaction Distributions of Cities</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.0ua6k740kq06c11fvdprk0eyqp5u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ua6k740kq06c11fvdprk0eyqp5u'>
+            <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Card Type]' role='dimension' type='nominal' />
+            <column caption='City Names' datatype='string' name='[City - Split 1]' role='dimension' semantic-role='[City].[Name]' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[City]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [City], &quot;,&quot;, 1 ) )' />
+            </column>
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='gender.c' datatype='string' name='[Gender (copy)_439945454795874304]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; else &apos;MALE&apos;&#10;END' />
+            </column>
+            <column datatype='boolean' name='[Gender]' role='dimension' type='nominal' />
+            <column-instance column='[Card Type]' derivation='None' name='[none:Card Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[City - Split 1]' derivation='None' name='[none:City - Split 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender (copy)_439945454795874304]' derivation='None' name='[none:Gender (copy)_439945454795874304:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[sum:Amount:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Card Type:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Gold&quot;' />
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Platinum&quot;' />
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Signature&quot;' />
+              <groupfilter function='member' level='[none:Card Type:nk]' member='&quot;Silver&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Gender (copy)_439945454795874304:nk]' member='&quot;FEMALE&quot;' />
+              <groupfilter function='member' level='[none:Gender (copy)_439945454795874304:nk]' member='&quot;MALE&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]</column>
+            <column>[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Card Type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' value='c&quot;₹&quot;#,##0,,.00M;-&quot;₹&quot;#,##0,,.00M' />
+            <format attr='font-weight' data-class='subtotal' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' value='bold' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' palette='red_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' />
+              <color column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:City - Split 1:nk]' />
+              <text column='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='has-stroke' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3A4EFC8A-45B8-46C1-B386-01770F331421}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Number of card and type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D675EB14-F3F1-49E6-953F-D34617EA0649}' />
+    </window>
+    <window class='worksheet' name='Cities Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' type='filter' />
+            <card param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Card Type:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{AE3BC715-32FD-4DAF-BA20-59A15433838F}' />
+    </window>
+    <window class='worksheet' name='Transaction Distribution of Cities'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[sum:Amount:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{5FAB32CD-9121-4CE4-B65A-1F43D3610F93}' />
+    </window>
+    <window class='worksheet' name='Distribution of Expenditure Types'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Exp Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4A5D013F-A9D2-4182-80B8-DAFC37DA59F7}' />
+    </window>
+    <window class='worksheet' name='Distribution of Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{65E16B15-3C3A-4FDB-B60A-B991B9BD2757}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[none:Gender (copy)_439945454795874304:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0ua6k740kq06c11fvdprk0eyqp5u].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_3C65F4D2A6504FD4BB314D86AF5F0DED:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0AD646ED-E587-4594-9680-4CD9E7A25BD2}' />
+    </window>
+  </windows>
+</workbook>
