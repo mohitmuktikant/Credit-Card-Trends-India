@@ -33,5 +33,5 @@ The dashboard helps visualize and answer key questions like:
 ## 🧰 Tools Used
 
 - **Tableau Public** - For creating the interactive dashboard
-- **Microsoft Excel / CSV** - For raw dataset (if applicable)
+- **Microsoft Excel / CSV** - For raw dataset
 - **GitHub** - For project versioning and showcase
